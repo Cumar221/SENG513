@@ -1,5 +1,4 @@
 function getStats(txt) {
-    test(txt);
     return {
         nChars: txt.length,
         nWords: txt.split(/[^0-9'a-zA-Z_]/).filter(Boolean).length,
@@ -11,9 +10,6 @@ function getStats(txt) {
         longestWords: longestWords(txt),
         mostFrequentWords: mostFrequentWords(txt)
     };
-}
-function test(txt) {
-    console.log(txt.split(/[^0-9'a-zA-Z_]/).filter(Boolean));
 }
 function maxLineLength(txt){
     var arr = txt.split(/\r\n|\r|\n/).filter(Boolean);
